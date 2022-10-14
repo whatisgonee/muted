@@ -1,0 +1,171 @@
+@font-face {
+	font-family: 'PixelFJ';
+	src: url('./PixelFJ.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'PixelFJ', sans-serif;
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 550px;
+	background-color: rgb(10, 10, 10);
+	position: absolute;
+	top: 0;
+}
+
+#line {
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	top: 0;
+	left: 40px;
+	margin-top: 50px;
+	background-color: grey;
+}
+
+#tweet-box {
+	font-size: 8px;
+	color: grey;
+	padding: 5px;
+	width: 470px;
+	height: 30px;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+
+	position: absolute;
+	top: 30px;
+	left: 70px;
+}
+
+#tweet-box::before, .tweet::before {
+	content: '';
+	display: inline-block;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	border: solid 2px grey;
+	position: absolute;
+	left: -36px;
+}
+
+.tweet {
+	font-size: 8px;
+	color: white;
+	width: 470px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	position: relative;
+	margin-left: 70px;
+	margin-top: 100px;
+	padding: 5px;
+}
+
+button {
+	border-radius: 5px;
+	background-color: #a30909;
+	border: solid 1px lightgrey;
+	color: white;
+	font-family: 'PixelFJ', sans-serif;
+	font-size: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #920707;
+}
+
+.avatar {
+	border-radius: 50%;
+	background-color: grey;
+	width: 50px;
+	height: 50px;
+}
+
+.text {
+	padding: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	border-radius: 10px;
+	border: solid 1px lightgrey;
+}
+
+.hr {
+	position: absolute;
+	height: 1px;
+	width: 450px;
+	background-color: grey;
+	top: 100;
+	left: 70;
+}
+
+.like {
+	background-color: transparent;
+	color: white;
+	font-size: 27px;
+	line-height: 0px;
+	border: none;
+}
+
+.like:hover {
+	background-color: transparent;
+}
+
+.username {
+	position: absolute;
+	top: -60;
+	font-size: 8px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.comments {
+	width: 140px;
+	word-wrap: break-word;
+}
+
+.grey {
+	color: grey;
+}
+
+a, .hashtag, .mention {
+	text-decoration: none;
+	color: lightblue;
+	cursor: pointer;
+}
+
+img {
+	border-radius: 50%;
+}
+
+#mask {
+	height: 50%;
+	width: 550px;
+	position: absolute;
+	bottom: 0;
+	opacity: 70%;
+	z-index: 2;
+	pointer-events: none;
+	background-image: linear-gradient(transparent, black);
+}
+
+#first {
+	margin-top: 180px;
+}
